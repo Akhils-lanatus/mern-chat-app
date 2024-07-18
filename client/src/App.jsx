@@ -1,7 +1,12 @@
-import React from "react";
-
+import Routing from "./Routing";
+import { Toaster } from "react-hot-toast";
 const App = () => {
-  return <div>App</div>;
+  return (
+    <>
+      <Routing />;
+      <Toaster />
+    </>
+  );
 };
 
 export default App;

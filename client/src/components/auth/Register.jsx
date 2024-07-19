@@ -116,7 +116,6 @@ export default function SignIn({ setAuthPage }) {
                 id="name"
                 label="Name"
                 name="name"
-                autoComplete={"false"}
               />
               <Typography color={"red"} fontSize={"12px"}>
                 {<ErrorMessage name="name" />}
@@ -128,7 +127,6 @@ export default function SignIn({ setAuthPage }) {
                 id="email"
                 label="Email Address"
                 name="email"
-                autoComplete={"false"}
               />
               <Typography color={"red"} fontSize={"12px"}>
                 {<ErrorMessage name="email" />}

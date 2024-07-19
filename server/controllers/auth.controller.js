@@ -61,6 +61,12 @@ export const loginUserController = async (req, res) => {
       process.env.JSONWEBTOKEN_SECRET,
       { expiresIn: "30d" }
     );
+
+    res.cookie("token", token, {
+      httpOnly: true,
+      secure: true,
+      maxAge: 60 * 60 * 24 * 30,
+    });
     return res.status(200).json({
       success: true,
       message: "Logged in",

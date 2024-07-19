@@ -64,7 +64,13 @@ export const loginUserController = async (req, res) => {
     return res.status(200).json({
       success: true,
       message: "Logged in",
-      token,
+      user: {
+        _id: user._id,
+        name: user.name,
+        email: user.email,
+        avatar: user.pic,
+        token,
+      },
     });
   } catch (error) {
     const message = errorHandler(error);

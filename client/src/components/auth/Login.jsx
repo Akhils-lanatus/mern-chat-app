@@ -72,6 +72,7 @@ export default function SignIn() {
               showToast("SUCCESS", res.data.message);
               setIsLoading(false);
               resetForm();
+              localStorage.setItem("user", JSON.stringify(res.data.user));
             }
           }}
         >

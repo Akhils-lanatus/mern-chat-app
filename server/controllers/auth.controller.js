@@ -67,6 +67,11 @@ export const loginUserController = async (req, res) => {
       secure: true,
       maxAge: 60 * 60 * 24 * 30,
     });
+    res.cookie("isAuth", true, {
+      httpOnly: false,
+      secure: false,
+      maxAge: 60 * 60 * 24 * 30,
+    });
     return res.status(200).json({
       success: true,
       message: "Logged in",
